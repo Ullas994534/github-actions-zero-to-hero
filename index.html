@@ -20,8 +20,18 @@ scroll-behavior:smooth;
 }
 
 body{
-background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
 color:white;
+overflow-x:hidden;
+}
+
+/* PARTICLE BACKGROUND */
+
+#particles-js{
+position:fixed;
+width:100%;
+height:100%;
+z-index:-1;
+background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
 }
 
 /* NAVBAR */
@@ -30,19 +40,17 @@ nav{
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:18px 10%;
+padding:20px 10%;
 position:sticky;
 top:0;
 background:rgba(255,255,255,0.05);
 backdrop-filter:blur(12px);
 border-bottom:1px solid rgba(255,255,255,0.08);
-z-index:1000;
 }
 
 .logo{
 font-size:22px;
 font-weight:600;
-letter-spacing:1px;
 background:linear-gradient(90deg,#00f2fe,#4facfe);
 -webkit-background-clip:text;
 color:transparent;
@@ -52,9 +60,7 @@ nav a{
 text-decoration:none;
 color:white;
 margin-left:25px;
-font-size:15px;
 position:relative;
-transition:0.3s;
 }
 
 nav a::after{
@@ -72,87 +78,107 @@ nav a:hover::after{
 width:100%;
 }
 
-nav a:hover{
-color:#00f2fe;
-}
-
 /* HERO */
 
 .hero{
-display:flex;
-flex-direction:column;
-align-items:center;
 text-align:center;
-padding:140px 20px;
+padding:150px 20px;
 }
 
 .hero h1{
-font-size:48px;
-margin-bottom:10px;
+font-size:52px;
 }
 
 .hero span{
 color:#00f2fe;
 }
 
-.hero h3{
-font-weight:400;
-margin-bottom:20px;
-}
-
 .hero p{
-max-width:750px;
-opacity:0.9;
+max-width:700px;
+margin:20px auto;
 line-height:1.7;
+opacity:0.9;
 }
 
-/* GLASS SECTION */
+/* GLASS SECTIONS */
 
 .glass{
-background:rgba(255,255,255,0.06);
-border-radius:16px;
-backdrop-filter:blur(12px);
-padding:40px;
-margin:40px auto;
 width:85%;
-box-shadow:0 10px 35px rgba(0,0,0,0.3);
+margin:40px auto;
+padding:40px;
+border-radius:16px;
+background:rgba(255,255,255,0.06);
+backdrop-filter:blur(12px);
+box-shadow:0 10px 40px rgba(0,0,0,0.4);
 transition:0.4s;
 }
 
 .glass:hover{
 transform:translateY(-8px);
-box-shadow:0 18px 45px rgba(0,0,0,0.4);
 }
-
-/* SECTION TITLE */
 
 .section-title{
 text-align:center;
-font-size:30px;
 margin-bottom:30px;
+font-size:30px;
 }
 
 /* SKILLS */
 
 .skills{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
 gap:18px;
 }
 
 .skill{
 background:rgba(255,255,255,0.1);
-padding:14px;
+padding:15px;
 border-radius:10px;
 text-align:center;
 transition:0.3s;
-font-size:14px;
 }
 
 .skill:hover{
 background:#00f2fe;
 color:black;
 transform:scale(1.08);
+}
+
+/* PIPELINE */
+
+.pipeline{
+display:flex;
+justify-content:space-between;
+flex-wrap:wrap;
+text-align:center;
+margin-top:30px;
+}
+
+.stage{
+flex:1;
+min-width:120px;
+padding:20px;
+position:relative;
+}
+
+.circle{
+width:60px;
+height:60px;
+border-radius:50%;
+background:#00f2fe;
+margin:auto;
+animation:pulse 2s infinite;
+}
+
+.stage p{
+margin-top:10px;
+}
+
+@keyframes pulse{
+0%{transform:scale(1)}
+50%{transform:scale(1.2)}
+100%{transform:scale(1)}
 }
 
 /* EXPERIENCE */
@@ -163,7 +189,6 @@ margin-bottom:25px;
 
 .exp h3{
 color:#00f2fe;
-margin-bottom:5px;
 }
 
 /* CONTACT */
@@ -176,25 +201,21 @@ text-align:center;
 display:inline-block;
 margin:10px;
 padding:10px 22px;
-border-radius:25px;
 background:#00f2fe;
+border-radius:25px;
 color:black;
 text-decoration:none;
 font-weight:600;
-transition:0.3s;
 }
 
 .contact a:hover{
 transform:scale(1.1);
 }
 
-/* FOOTER */
-
 footer{
 text-align:center;
-padding:25px;
-opacity:0.6;
-font-size:14px;
+padding:30px;
+opacity:0.7;
 }
 
 </style>
@@ -202,15 +223,18 @@ font-size:14px;
 
 <body>
 
+<div id="particles-js"></div>
+
 <!-- NAVBAR -->
 
 <nav>
 
-<h2 class="logo">DevOps Engineer</h2>
+<div class="logo">DevOps Engineer</div>
 
 <div>
 <a href="#about">About</a>
 <a href="#skills">Skills</a>
+<a href="#pipeline">Pipeline</a>
 <a href="#experience">Experience</a>
 <a href="#contact">Contact</a>
 </div>
@@ -221,27 +245,27 @@ font-size:14px;
 
 <section class="hero" id="about">
 
-<h1>Hello, I'm <span>Ullas Banamagi</span></h1>
+<h1>Hello I'm <span>Ullas Banamagi</span></h1>
 
 <h3>Senior AWS DevOps & Site Reliability Engineer</h3>
 
 <p>
-DevOps Engineer with 8.5+ years of experience designing, automating and managing highly available
-cloud infrastructure. Skilled in building scalable platforms, improving system reliability,
-and implementing CI/CD pipelines across enterprise environments.
+DevOps Engineer with 8.5+ years of experience designing, automating and managing
+highly available cloud infrastructure. Experienced in building scalable platforms,
+implementing CI/CD pipelines, improving reliability and supporting enterprise
+production environments.
 
-Currently working in enterprise environments including companies like Dell Technologies
-and Wipro, while also gaining startup experience at InKnowTech where I contributed to building
-cloud-native infrastructure and DevOps automation.
+Worked with companies like Dell Technologies, Wipro and startup environments
+like InKnowTech delivering cloud-native infrastructure and DevOps automation.
 </p>
 
 </section>
 
 <!-- SKILLS -->
 
-<section id="skills" class="glass">
+<section class="glass" id="skills">
 
-<h2 class="section-title">DevOps Tools & Technologies</h2>
+<h2 class="section-title">DevOps Tools</h2>
 
 <div class="skills">
 
@@ -257,9 +281,45 @@ cloud-native infrastructure and DevOps automation.
 <div class="skill">Prometheus</div>
 <div class="skill">Grafana</div>
 <div class="skill">ELK Stack</div>
-<div class="skill">Shell Scripting</div>
 <div class="skill">Python</div>
-<div class="skill">CI/CD Pipelines</div>
+<div class="skill">Shell</div>
+
+</div>
+
+</section>
+
+<!-- DEVOPS PIPELINE -->
+
+<section class="glass" id="pipeline">
+
+<h2 class="section-title">CI/CD Pipeline</h2>
+
+<div class="pipeline">
+
+<div class="stage">
+<div class="circle"></div>
+<p>Code</p>
+</div>
+
+<div class="stage">
+<div class="circle"></div>
+<p>Build</p>
+</div>
+
+<div class="stage">
+<div class="circle"></div>
+<p>Test</p>
+</div>
+
+<div class="stage">
+<div class="circle"></div>
+<p>Deploy</p>
+</div>
+
+<div class="stage">
+<div class="circle"></div>
+<p>Monitor</p>
+</div>
 
 </div>
 
@@ -267,50 +327,35 @@ cloud-native infrastructure and DevOps automation.
 
 <!-- EXPERIENCE -->
 
-<section id="experience" class="glass">
+<section class="glass" id="experience">
 
-<h2 class="section-title">Professional Experience</h2>
+<h2 class="section-title">Experience</h2>
 
 <div class="exp">
-
 <h3>Dell Technologies</h3>
-
-<p>
-Working as an AWS Site Reliability Engineer supporting production-scale enterprise infrastructure.
-Responsible for system reliability, monitoring, automation and incident response management.
-</p>
-
+<p>AWS Site Reliability Engineer managing enterprise cloud infrastructure,
+monitoring systems and automation workflows.</p>
 </div>
 
 <div class="exp">
-
 <h3>Wipro</h3>
-
-<p>
-Worked on enterprise cloud infrastructure supporting large-scale applications while implementing
-CI/CD pipelines, Linux administration and DevOps automation practices.
-</p>
-
+<p>Worked on enterprise DevOps environments implementing CI/CD pipelines,
+Linux administration and automation practices.</p>
 </div>
 
 <div class="exp">
-
 <h3>InKnowTech</h3>
-
-<p>
-Startup experience building scalable cloud environments, automating deployments and helping
-teams adopt DevOps culture and infrastructure-as-code practices.
-</p>
-
+<p>Startup experience building scalable cloud environments and implementing
+DevOps best practices for fast product delivery.</p>
 </div>
 
 </section>
 
 <!-- CONTACT -->
 
-<section id="contact" class="glass contact">
+<section class="glass contact" id="contact">
 
-<h2 class="section-title">Connect With Me</h2>
+<h2 class="section-title">Connect</h2>
 
 <a href="#">GitHub</a>
 <a href="#">LinkedIn</a>
@@ -323,6 +368,48 @@ teams adopt DevOps culture and infrastructure-as-code practices.
 © 2026 Ullas Banamagi | DevOps Engineer Portfolio
 
 </footer>
+
+<!-- PARTICLES -->
+
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+<script>
+
+particlesJS("particles-js",{
+
+particles:{
+number:{value:80},
+color:{value:"#00f2fe"},
+shape:{type:"circle"},
+opacity:{value:0.5},
+size:{value:3},
+line_linked:{
+enable:true,
+distance:150,
+color:"#00f2fe",
+opacity:0.4,
+width:1
+},
+move:{enable:true,speed:2}
+},
+
+interactivity:{
+events:{
+onhover:{enable:true,mode:"grab"}
+},
+modes:{
+grab:{
+distance:150,
+line_linked:{opacity:1}
+}
+}
+},
+
+retina_detect:true
+
+});
+
+</script>
 
 </body>
 </html>
