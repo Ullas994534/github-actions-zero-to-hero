@@ -94,13 +94,13 @@ color:#00f2fe;
 }
 
 .hero p{
-max-width:700px;
+max-width:750px;
 margin:20px auto;
 line-height:1.7;
 opacity:0.9;
 }
 
-/* GLASS SECTIONS */
+/* GLASS SECTION */
 
 .glass{
 width:85%;
@@ -123,62 +123,29 @@ margin-bottom:30px;
 font-size:30px;
 }
 
-/* SKILLS */
+/* GRID */
 
-.skills{
+.grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
 gap:18px;
 }
 
-.skill{
+/* CARDS */
+
+.card{
 background:rgba(255,255,255,0.1);
 padding:15px;
 border-radius:10px;
 text-align:center;
 transition:0.3s;
+font-size:14px;
 }
 
-.skill:hover{
+.card:hover{
 background:#00f2fe;
 color:black;
-transform:scale(1.08);
-}
-
-/* PIPELINE */
-
-.pipeline{
-display:flex;
-justify-content:space-between;
-flex-wrap:wrap;
-text-align:center;
-margin-top:30px;
-}
-
-.stage{
-flex:1;
-min-width:120px;
-padding:20px;
-position:relative;
-}
-
-.circle{
-width:60px;
-height:60px;
-border-radius:50%;
-background:#00f2fe;
-margin:auto;
-animation:pulse 2s infinite;
-}
-
-.stage p{
-margin-top:10px;
-}
-
-@keyframes pulse{
-0%{transform:scale(1)}
-50%{transform:scale(1.2)}
-100%{transform:scale(1)}
+transform:scale(1.07);
 }
 
 /* EXPERIENCE */
@@ -233,8 +200,8 @@ opacity:0.7;
 
 <div>
 <a href="#about">About</a>
-<a href="#skills">Skills</a>
-<a href="#pipeline">Pipeline</a>
+<a href="#skills">DevOps</a>
+<a href="#ai">AI Tools</a>
 <a href="#experience">Experience</a>
 <a href="#contact">Contact</a>
 </div>
@@ -250,76 +217,69 @@ opacity:0.7;
 <h3>Senior AWS DevOps & Site Reliability Engineer</h3>
 
 <p>
-DevOps Engineer with 8.5+ years of experience designing, automating and managing
-highly available cloud infrastructure. Experienced in building scalable platforms,
-implementing CI/CD pipelines, improving reliability and supporting enterprise
-production environments.
 
-Worked with companies like Dell Technologies, Wipro and startup environments
-like InKnowTech delivering cloud-native infrastructure and DevOps automation.
+DevOps Engineer with 8.5+ years of experience designing, automating and managing
+highly available cloud infrastructure across enterprise and startup environments.
+
+Specialized in AWS cloud platforms, infrastructure automation, CI/CD pipelines,
+container orchestration and monitoring solutions that ensure scalable,
+secure and reliable systems.
+
+I have worked with enterprise organizations like Dell Technologies and Wipro
+and startup companies like InKnowTech delivering modern DevOps solutions,
+cloud-native architecture and operational excellence.
+
 </p>
 
 </section>
 
-<!-- SKILLS -->
+<!-- DEVOPS SKILLS -->
 
 <section class="glass" id="skills">
 
-<h2 class="section-title">DevOps Tools</h2>
+<h2 class="section-title">DevOps Tools & Platforms</h2>
 
-<div class="skills">
+<div class="grid">
 
-<div class="skill">AWS</div>
-<div class="skill">Linux</div>
-<div class="skill">Docker</div>
-<div class="skill">Kubernetes</div>
-<div class="skill">Terraform</div>
-<div class="skill">Ansible</div>
-<div class="skill">Jenkins</div>
-<div class="skill">Git</div>
-<div class="skill">GitHub Actions</div>
-<div class="skill">Prometheus</div>
-<div class="skill">Grafana</div>
-<div class="skill">ELK Stack</div>
-<div class="skill">Python</div>
-<div class="skill">Shell</div>
+<div class="card">AWS Cloud</div>
+<div class="card">Linux</div>
+<div class="card">Docker</div>
+<div class="card">Kubernetes</div>
+<div class="card">Terraform</div>
+<div class="card">Ansible</div>
+<div class="card">Jenkins</div>
+<div class="card">Git</div>
+<div class="card">GitHub Actions</div>
+<div class="card">Prometheus</div>
+<div class="card">Grafana</div>
+<div class="card">ELK Stack</div>
+<div class="card">Shell Scripting</div>
+<div class="card">Python</div>
 
 </div>
 
 </section>
 
-<!-- DEVOPS PIPELINE -->
+<!-- AI / GENAI TOOLS -->
 
-<section class="glass" id="pipeline">
+<section class="glass" id="ai">
 
-<h2 class="section-title">CI/CD Pipeline</h2>
+<h2 class="section-title">AI / GenAI & AI Agent Platforms</h2>
 
-<div class="pipeline">
+<div class="grid">
 
-<div class="stage">
-<div class="circle"></div>
-<p>Code</p>
-</div>
-
-<div class="stage">
-<div class="circle"></div>
-<p>Build</p>
-</div>
-
-<div class="stage">
-<div class="circle"></div>
-<p>Test</p>
-</div>
-
-<div class="stage">
-<div class="circle"></div>
-<p>Deploy</p>
-</div>
-
-<div class="stage">
-<div class="circle"></div>
-<p>Monitor</p>
-</div>
+<div class="card">Ollama</div>
+<div class="card">AWS Bedrock</div>
+<div class="card">OpenAI API</div>
+<div class="card">LangChain</div>
+<div class="card">LlamaIndex</div>
+<div class="card">Vector Databases</div>
+<div class="card">Pinecone</div>
+<div class="card">ChromaDB</div>
+<div class="card">HuggingFace</div>
+<div class="card">OpenChat</div>
+<div class="card">AutoGPT Agents</div>
+<div class="card">AI Workflows</div>
 
 </div>
 
@@ -329,24 +289,46 @@ like InKnowTech delivering cloud-native infrastructure and DevOps automation.
 
 <section class="glass" id="experience">
 
-<h2 class="section-title">Experience</h2>
+<h2 class="section-title">Professional Experience</h2>
 
 <div class="exp">
+
 <h3>Dell Technologies</h3>
-<p>AWS Site Reliability Engineer managing enterprise cloud infrastructure,
-monitoring systems and automation workflows.</p>
+
+<p>
+
+Working as an AWS Site Reliability Engineer supporting enterprise cloud infrastructure.
+Responsible for monitoring, automation, production reliability, incident management
+and maintaining highly available cloud platforms.
+
+</p>
+
 </div>
 
 <div class="exp">
+
 <h3>Wipro</h3>
-<p>Worked on enterprise DevOps environments implementing CI/CD pipelines,
-Linux administration and automation practices.</p>
+
+<p>
+
+Worked on large-scale enterprise cloud infrastructure environments implementing
+DevOps automation, infrastructure-as-code practices and CI/CD pipeline integrations.
+
+</p>
+
 </div>
 
 <div class="exp">
+
 <h3>InKnowTech</h3>
-<p>Startup experience building scalable cloud environments and implementing
-DevOps best practices for fast product delivery.</p>
+
+<p>
+
+Startup experience building scalable cloud infrastructure and implementing DevOps
+best practices to support fast development and reliable deployments.
+
+</p>
+
 </div>
 
 </section>
@@ -355,7 +337,7 @@ DevOps best practices for fast product delivery.</p>
 
 <section class="glass contact" id="contact">
 
-<h2 class="section-title">Connect</h2>
+<h2 class="section-title">Connect With Me</h2>
 
 <a href="#">GitHub</a>
 <a href="#">LinkedIn</a>
@@ -398,10 +380,7 @@ events:{
 onhover:{enable:true,mode:"grab"}
 },
 modes:{
-grab:{
-distance:150,
-line_linked:{opacity:1}
-}
+grab:{distance:150,line_linked:{opacity:1}}
 }
 },
 
