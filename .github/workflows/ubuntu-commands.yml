@@ -9,4 +9,4 @@ jobs:
      runs-on: ubuntu-latest
      steps:
          - name: check the Ubuntu version.
-           run: echo "cat /etc/os-release."
+           run: echo cat /etc/os-release
