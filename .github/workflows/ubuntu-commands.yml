@@ -1,12 +1,10 @@
-name: ubuntu-commands
-
+name: performance
 on:
   workflow_dispatch:
 
 jobs:
-
-  commands:
+  system:
      runs-on: ubuntu-latest
      steps:
-         - name: Ubuntu version.
+         - name: Ubuntu version
            run: cat /etc/os-release
