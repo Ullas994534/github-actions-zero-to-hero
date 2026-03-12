@@ -1,13 +1,12 @@
-name: system
-
-on:
-  workflow_dispatch:
-
+---
+name: system-usage
+on: null
+workflow_dispatch: null
 jobs:
-
-  runs-on: ubuntu-latest
+  run-on: ubuntu-latest
   steps:
     - name: disk usage
       run: df -h
     - name: memory usage
-      run: free -m 
+      run: free -m
+
