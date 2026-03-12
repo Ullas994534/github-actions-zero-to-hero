@@ -5,8 +5,7 @@ on:
   
 jobs:
 
-system-usage:
-  run-on: ubuntu-latest
+  runs-on: ubuntu-latest
   steps:
     - name: disk usage
       run: df -h
