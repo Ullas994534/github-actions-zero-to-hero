@@ -1,0 +1,14 @@
+name: ubuntu-commands
+
+on:
+  workflow_dispatch:
+
+jobs:
+
+  commands:
+     runs-on: ubuntu-latest
+     steps:
+       - name: check the disk usage and memory usage
+         run: df -h && free -h
+       - name: check the system performance
+         run: top
