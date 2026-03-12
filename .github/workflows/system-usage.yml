@@ -1,12 +1,16 @@
 ---
 name: system-usage
-on: null
-workflow_dispatch: null
+on:
+  workflow_dispatch:
+  
 jobs:
+
+details:
   run-on: ubuntu-latest
   steps:
-    - name: disk usage
-      run: df -h
-    - name: memory usage
-      run: free -m
+    - name: check disk
+      run: echo df -h
+      
+    - name: check memory
+      run: echo free -m
 
