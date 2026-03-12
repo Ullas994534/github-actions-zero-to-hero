@@ -4,9 +4,9 @@ on:
   workflow_dispatch:
   
 jobs:
-
-  runs-on: ubuntu-latest
-  steps:
+  check-system:
+   runs-on: ubuntu-latest
+   steps:
     - name: disk usage
       run: df -h
       
