@@ -1,0 +1,13 @@
+name: system
+
+on:
+  workflow_dispatch:
+
+jobs:
+
+  runs-on: ubuntu-latest
+  steps:
+    - name: disk usage
+      run: df -h
+    - name: memory usage
+      run: free -m 
