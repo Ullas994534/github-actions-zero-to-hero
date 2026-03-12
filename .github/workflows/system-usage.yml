@@ -5,12 +5,12 @@ on:
   
 jobs:
 
-details:
+system-usage:
   run-on: ubuntu-latest
   steps:
-    - name: check disk
-      run: echo df -h
+    - name: disk usage
+      run: df -h
       
-    - name: check memory
-      run: echo free -m
+    - name: memory usage
+      run: free -m
 
