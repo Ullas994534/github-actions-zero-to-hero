@@ -8,5 +8,5 @@ jobs:
   commands:
      runs-on: ubuntu-latest
      steps:
-       - name: check the disk usage and memory usage
-         run: echo "df -h && free -h"
+       - name: check the disk usage.
+         run: echo "df -h"
