@@ -10,5 +10,3 @@ jobs:
      steps:
        - name: check the disk usage and memory usage
          run: df -h && free -h
-       - name: check the system performance
-         run: top
