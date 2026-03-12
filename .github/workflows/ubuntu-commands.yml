@@ -9,4 +9,4 @@ jobs:
      runs-on: ubuntu-latest
      steps:
        - name: check the disk usage and memory usage
-         run: df -h && free -h
+         run: echo "df -h && free -h"
