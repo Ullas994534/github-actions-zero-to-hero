@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -186,11 +185,9 @@ opacity:0.7;
 }
 
 @keyframes float{
-
 0%{transform:translateY(0)}
 50%{transform:translateY(-10px)}
 100%{transform:translateY(0)}
-
 }
 
 /* EXPERIENCE */
@@ -201,6 +198,12 @@ margin-bottom:25px;
 
 .exp h3{
 color:#00f2fe;
+}
+
+.exp ul{
+margin-top:10px;
+padding-left:20px;
+line-height:1.6;
 }
 
 /* CONTACT */
@@ -249,6 +252,7 @@ opacity:0.7;
 <a href="#skills">DevOps</a>
 <a href="#ai">AI Tools</a>
 <a href="#architecture">Architecture</a>
+<a href="#projects">Projects</a>
 <a href="#experience">Experience</a>
 <a href="#contact">Contact</a>
 </div>
@@ -264,28 +268,24 @@ opacity:0.7;
 <h3>Senior AWS DevOps & Site Reliability Engineer</h3>
 
 <p>
-
 DevOps Engineer with 8.5+ years of experience designing and managing
 highly available cloud infrastructure. Experienced in AWS cloud,
 automation, containerization, monitoring platforms and modern
 DevOps practices.
 
 Worked with enterprise companies like Dell Technologies and Wipro
-as well as startup environments like InKnowTech delivering
-scalable cloud solutions and automation platforms.
-
+as well as startup environments delivering scalable cloud solutions.
 </p>
 
 </section>
 
-<!-- DEVOPS TOOLS -->
+<!-- DEVOPS -->
 
 <section class="glass" id="skills">
 
 <h2 class="section-title">DevOps Tools & Platforms</h2>
 
 <div class="grid">
-
 <div class="card">AWS</div>
 <div class="card">Linux</div>
 <div class="card">Docker</div>
@@ -300,19 +300,17 @@ scalable cloud solutions and automation platforms.
 <div class="card">ELK Stack</div>
 <div class="card">Python</div>
 <div class="card">Shell</div>
-
 </div>
 
 </section>
 
-<!-- AI TOOLS -->
+<!-- AI -->
 
 <section class="glass" id="ai">
 
 <h2 class="section-title">AI / GenAI & AI Agents</h2>
 
 <div class="grid">
-
 <div class="card">Ollama</div>
 <div class="card">AWS Bedrock</div>
 <div class="card">OpenAI API</div>
@@ -324,45 +322,76 @@ scalable cloud solutions and automation platforms.
 <div class="card">ChromaDB</div>
 <div class="card">AutoGPT</div>
 <div class="card">AI Workflows</div>
-
 </div>
 
 </section>
 
-<!-- CLOUD ARCHITECTURE -->
+<!-- ARCHITECTURE -->
 
 <section class="glass" id="architecture">
 
 <h2 class="section-title">Cloud Infrastructure Architecture</h2>
 
 <div class="architecture">
-
 <div class="arch-box">🌐 Users</div>
-
 <div class="arrow">⬇</div>
-
 <div class="arch-box">☁ AWS Cloud</div>
-
 <div class="arrow">⬇</div>
 
 <div class="arch-row">
-
 <div class="arch-box">⚖ Load Balancer</div>
 <div class="arch-box">🐳 Docker</div>
 <div class="arch-box">☸ Kubernetes</div>
-
 </div>
 
 <div class="arrow">⬇</div>
 
 <div class="arch-row">
-
 <div class="arch-box">🗄 Database</div>
 <div class="arch-box">📊 Monitoring</div>
 <div class="arch-box">🔐 Security</div>
-
+</div>
 </div>
 
+</section>
+
+<!-- PROJECTS -->
+
+<section class="glass" id="projects">
+
+<h2 class="section-title">Projects</h2>
+
+<div class="exp">
+<h3>AWS 3-Tier Architecture</h3>
+<p>Designed scalable cloud architecture using AWS services.</p>
+<ul>
+<li>Implemented EC2, ALB, Auto Scaling Groups, and RDS</li>
+<li>Built secure VPC with public and private subnets</li>
+<li>Configured IAM roles and security groups</li>
+<li>Ensured high availability and fault tolerance</li>
+</ul>
+</div>
+
+<div class="exp">
+<h3>Kubernetes Microservices Deployment</h3>
+<p>Deployed containerized applications using Kubernetes.</p>
+<ul>
+<li>Containerized applications using Docker</li>
+<li>Deployed on Amazon EKS cluster</li>
+<li>Used Helm charts for automation</li>
+<li>Integrated CI/CD pipelines</li>
+</ul>
+</div>
+
+<div class="exp">
+<h3>Enterprise Monitoring Platform</h3>
+<p>Built monitoring system for enterprise infrastructure.</p>
+<ul>
+<li>Monitored 600+ servers</li>
+<li>Used Prometheus and Grafana dashboards</li>
+<li>Configured alerting and observability</li>
+<li>Improved system reliability</li>
+</ul>
 </div>
 
 </section>
@@ -371,39 +400,21 @@ scalable cloud solutions and automation platforms.
 
 <section class="glass" id="experience">
 
-<h2 class="section-title">Professional Experience</h2>
+<h2 class="section-title">Experience</h2>
 
 <div class="exp">
-
 <h3>Dell Technologies</h3>
-
-<p>
-AWS Site Reliability Engineer supporting enterprise production
-infrastructure with monitoring, automation and incident management.
-</p>
-
+<p>AWS SRE handling production systems, monitoring and automation.</p>
 </div>
 
 <div class="exp">
-
 <h3>Wipro</h3>
-
-<p>
-Worked on enterprise cloud infrastructure implementing DevOps
-automation and infrastructure-as-code practices.
-</p>
-
+<p>Worked on cloud infrastructure and DevOps automation.</p>
 </div>
 
 <div class="exp">
-
 <h3>InKnowTech</h3>
-
-<p>
-Startup experience building scalable cloud environments and
-implementing modern DevOps workflows.
-</p>
-
+<p>Built scalable startup cloud environments and CI/CD pipelines.</p>
 </div>
 
 </section>
@@ -414,55 +425,35 @@ implementing modern DevOps workflows.
 
 <h2 class="section-title">Connect With Me</h2>
 
-<a href="https://github.com/Ullas994534?tab=repositories">GitHub</a>
-<a href="https://www.linkedin.com/in/ullas-banamagi-5843611b7/">LinkedIn</a>
-<a href="ullas.banamagi01@gmail.com">Email</a>
+<a href="https://github.com/Ullas994534">GitHub</a>
+<a href="https://www.linkedin.com">LinkedIn</a>
+<a href="mailto:ullas.banamagi01@gmail.com">Email</a>
 
 </section>
 
 <footer>
-
-© 2026 Ullas Banamagi | DevOps Engineer Portfolio
-
+© 2026 Ullas Banamagi | DevOps Portfolio
 </footer>
-
-<!-- PARTICLES -->
 
 <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 
 <script>
-
 particlesJS("particles-js",{
-
 particles:{
 number:{value:70},
 color:{value:"#00f2fe"},
 shape:{type:"circle"},
 opacity:{value:0.5},
 size:{value:3},
-line_linked:{
-enable:true,
-distance:150,
-color:"#00f2fe",
-opacity:0.4,
-width:1
-},
+line_linked:{enable:true,distance:150,color:"#00f2fe",opacity:0.4,width:1},
 move:{enable:true,speed:2}
 },
-
 interactivity:{
-events:{
-onhover:{enable:true,mode:"grab"}
+events:{onhover:{enable:true,mode:"grab"}},
+modes:{grab:{distance:150,line_linked:{opacity:1}}}
 },
-modes:{
-grab:{distance:150,line_linked:{opacity:1}}
-}
-},
-
 retina_detect:true
-
 });
-
 </script>
 
 </body>
