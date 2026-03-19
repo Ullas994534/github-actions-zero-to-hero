@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
 
@@ -82,7 +83,7 @@ width:100%;
 
 .hero{
 text-align:center;
-padding:140px 20px;
+padding:150px 20px;
 }
 
 .hero h1{
@@ -148,48 +149,7 @@ color:black;
 transform:scale(1.08);
 }
 
-/* ARCHITECTURE */
-
-.architecture{
-display:flex;
-flex-direction:column;
-align-items:center;
-gap:20px;
-}
-
-.arch-row{
-display:flex;
-gap:25px;
-flex-wrap:wrap;
-justify-content:center;
-}
-
-.arch-box{
-padding:18px 25px;
-background:rgba(255,255,255,0.1);
-border-radius:12px;
-font-size:14px;
-animation:float 4s infinite;
-}
-
-.arch-box:hover{
-background:#00f2fe;
-color:black;
-transform:scale(1.1);
-}
-
-.arrow{
-font-size:24px;
-opacity:0.7;
-}
-
-@keyframes float{
-0%{transform:translateY(0)}
-50%{transform:translateY(-10px)}
-100%{transform:translateY(0)}
-}
-
-/* PROJECT / EXPERIENCE */
+/* EXPERIENCE / PROJECT */
 
 .exp{
 margin-bottom:25px;
@@ -244,8 +204,8 @@ opacity:0.7;
 <a href="#about">About</a>
 <a href="#skills">DevOps</a>
 <a href="#ai">AI Tools</a>
-<a href="#architecture">Architecture</a>
 <a href="#projects">Projects</a>
+<a href="#architecture">Architecture</a>
 <a href="#experience">Experience</a>
 <a href="#contact">Contact</a>
 </div>
@@ -257,9 +217,8 @@ opacity:0.7;
 <h1>Hello I'm <span>Ullas Banamagi</span></h1>
 <h3>Senior AWS DevOps & Site Reliability Engineer</h3>
 <p>
-DevOps Engineer with strong expertise in automation, cloud infrastructure,
-and AI-integrated DevOps solutions. Experienced in building scalable,
-self-healing systems and reducing manual operations through intelligent automation.
+DevOps Engineer with 8.5+ years of experience designing and managing highly available cloud infrastructure.
+Expert in AWS, automation, CI/CD, containerization, monitoring, and AI-driven DevOps solutions.
 </p>
 </section>
 
@@ -269,9 +228,11 @@ self-healing systems and reducing manual operations through intelligent automati
 <h2 class="section-title">DevOps Tools & Platforms</h2>
 <div class="grid">
 <div class="card">AWS</div>
+<div class="card">Linux</div>
 <div class="card">Docker</div>
 <div class="card">Kubernetes</div>
 <div class="card">Terraform</div>
+<div class="card">Ansible</div>
 <div class="card">Jenkins</div>
 <div class="card">GitHub Actions</div>
 <div class="card">Prometheus</div>
@@ -294,130 +255,45 @@ self-healing systems and reducing manual operations through intelligent automati
 </div>
 </section>
 
-<!-- ARCHITECTURE -->
-
-<section class="glass" id="architecture">
-<h2 class="section-title">Cloud Architecture</h2>
-
-<div class="architecture">
-<div class="arch-box">Users</div>
-<div class="arrow">⬇</div>
-<div class="arch-box">AWS Cloud</div>
-
-<div class="arch-row">
-<div class="arch-box">Load Balancer</div>
-<div class="arch-box">Docker</div>
-<div class="arch-box">Kubernetes</div>
-</div>
-
-<div class="arch-row">
-<div class="arch-box">Database</div>
-<div class="arch-box">Monitoring</div>
-<div class="arch-box">Security</div>
-</div>
-</div>
-</section>
-
 <!-- PROJECTS -->
 
 <section class="glass" id="projects">
-<h2 class="section-title">Enterprise Projects & Automation</h2>
+<h2 class="section-title">Enterprise DevOps & AI Projects</h2>
 
 <div class="exp">
-<h3>AI-Powered DevOps Automation Platform</h3>
+<h3>🏦 Enterprise Banking Application (Production-Grade)</h3>
 <ul>
-<li>Built AI system for automated incident analysis using OpenAI</li>
-<li>Automated root cause detection from logs</li>
-<li>Integrated Slack alerts and summaries</li>
-<li>Reduced manual effort by 60%</li>
+<li>Designed secure 3-tier AWS architecture (ALB, EC2, RDS Multi-AZ)</li>
+<li>Implemented CI/CD pipelines using GitHub Actions & Jenkins</li>
+<li>Provisioned infrastructure using Terraform (IaC)</li>
+<li>Configured IAM, Secrets Manager, and WAF security</li>
+<li><b>Impact:</b> Achieved 99.9% uptime and zero downtime deployments</li>
 </ul>
 </div>
 
 <div class="exp">
-<h3>AWS 3-Tier Architecture (Automated)</h3>
+<h3>⚙️ 2-Tier Web Application (Industry Standard)</h3>
 <ul>
-<li>Provisioned infrastructure using Terraform</li>
-<li>Configured ALB, EC2, RDS, Auto Scaling</li>
-<li>Achieved zero downtime deployments</li>
+<li>Deployed NGINX + EC2 + MySQL architecture</li>
+<li>Automated deployment using CI/CD pipelines</li>
+<li>Configured monitoring using CloudWatch</li>
+<li><b>Impact:</b> Reduced manual work by 80%</li>
 </ul>
 </div>
 
 <div class="exp">
-<h3>Kubernetes CI/CD Platform</h3>
+<h3>🤖 AI-Powered DevOps Automation</h3>
 <ul>
-<li>Deployed microservices on EKS</li>
-<li>Automated CI/CD using GitHub Actions</li>
-<li>Used Helm for deployments</li>
-</ul>
-</div>
-
-<div class="exp">
-<h3>Enterprise Monitoring System</h3>
-<ul>
-<li>Monitored 600+ servers</li>
-<li>Built dashboards with Grafana</li>
-<li>Configured alerting system</li>
-</ul>
-</div>
-
-<div class="exp">
-<h3>Self-Healing Automation System</h3>
-<ul>
-<li>Auto-recovery for EC2 and Kubernetes failures</li>
-<li>Integrated with CloudWatch alerts</li>
-<li>Improved uptime significantly</li>
+<li>Automated incident detection using AI</li>
+<li>Log-based root cause analysis</li>
+<li>Slack alerts with AI summaries</li>
+<li><b>Impact:</b> Reduced MTTR by 60%</li>
 </ul>
 </div>
 
 </section>
 
-<!-- EXPERIENCE -->
+<!-- ARCHITECTURE -->
 
-<section class="glass" id="experience">
-<h2 class="section-title">Experience</h2>
-
-<div class="exp">
-<h3>Dell Technologies</h3>
-<p>Handled production AWS infrastructure, automation and monitoring.</p>
-</div>
-
-<div class="exp">
-<h3>Wipro</h3>
-<p>Worked on DevOps automation and cloud solutions.</p>
-</div>
-
-<div class="exp">
-<h3>InKnowTech</h3>
-<p>Built scalable startup cloud systems and CI/CD pipelines.</p>
-</div>
-
-</section>
-
-<!-- CONTACT -->
-
-<section class="glass contact" id="contact">
-<h2 class="section-title">Connect</h2>
-<a href="https://github.com/Ullas994534">GitHub</a>
-<a href="#">LinkedIn</a>
-<a href="mailto:ullas.banamagi01@gmail.com">Email</a>
-</section>
-
-<footer>
-© 2026 Ullas Banamagi | DevOps Portfolio
-</footer>
-
-<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-
-<script>
-particlesJS("particles-js",{
-particles:{
-number:{value:70},
-color:{value:"#00f2fe"},
-line_linked:{enable:true,color:"#00f2fe"},
-move:{speed:2}
-}
-});
-</script>
-
-</body>
-</html>
+<section class="glass" id="architecture">
+<h2 class="section-title">Cloud Architectur
